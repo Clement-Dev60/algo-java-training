@@ -24,10 +24,10 @@ public class Main {
 
     // Remplace les ??? par le bon code
     public static int trouverMax(int[] t) {
-        int max = ???;
-        for (int i = ???; i < t.length; i++) {
-            if (t[i] ??? max) {
-                max = ???;
+        int max = 0;
+        for (int i = 1; i < t.length; i++) {
+            if (t[i] > max) {
+                max = t[i];
             }
         }
         return max;
@@ -36,19 +36,19 @@ public class Main {
     // Remplace les ??? par le bon code
     public static boolean contient(int[] t, int val) {
         for (int i = 0; i < t.length; i++) {
-            if (??? == ???) {
-                return ???;
+            if (t[i]== val ){
+                return true;
             }
         }
-        return ???;
+        return false;
     }
 
     // Remplace les ??? par le bon code
     public static int sommePairs(int[] t) {
         int somme = 0;
         for (int i = 0; i < t.length; i++) {
-            if (t[i] ??? 2 == ???) {
-                somme = somme + ???;
+            if (t[i] % 2 == 0) {
+                somme = somme + t[i];
             }
         }
         return somme;
@@ -56,10 +56,10 @@ public class Main {
 
     // Remplace les ??? par le bon code
     public static int[] dupliquer(int[] t) {
-        int[] res = new int[t.length ??? 2];
+        int[] res = new int[t.length * 2];
         for (int i = 0; i < t.length; i++) {
-            res[i ??? 2] = t[i];
-            res[i ??? 2 ??? 1] = t[i];
+            res[i*2] = t[i];
+            res[i*2 + 1] = t[i];
         }
         return res;
     }
